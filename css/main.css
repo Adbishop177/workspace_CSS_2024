@@ -1,0 +1,38 @@
+/* Style file created by Andrew Bishop
+=============================================
+00: css variable
+01: color
+02: typography
+=============================================
+*/
+/* 00 css variable */
+:root{
+    --body-color: hsla(359, 50%, 35%,0.8);
+    --page-color: hsla(140, 100%, 50%, 0.2);
+    --sidebar-color:hsla(197, 100%, 43%, 0.5);
+    --sect-color: rgb(255, 174, 0);
+    --font-color: rgb(201, 198, 198);
+    --head-color: hsla(0, 88%, 16%, 0.842);
+    --h1-color: hsla(300, 100%, 50%, 0.1);
+}
+/* 01 Color*/
+body{
+    background-color: var(--body-color);
+}
+#zen-intro{
+    background-color: var(--page-color);
+    color: var(--font-color)
+}
+#zen-supporting{
+    background-color: var(--sidebar-color);
+}
+.sidebar{
+    background-color: var(--sect-color);
+    color: var(--font-color)
+}
+#zen-summary{
+    background-color: var(--head-color);
+}
+h1{
+    background-color: var(--h1-color);
+}
