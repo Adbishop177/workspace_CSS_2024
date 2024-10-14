@@ -1,129 +1,229 @@
-/* Style file created by Andrew Bishop
-=============================================
-00: css variable
-01: color
-02: typography
-=============================================
-*/
-/* 00 css variable */
-:root{
-    --body-color: hsla(359, 50%, 35%,0.8);
-    --page-color: hsla(140, 100%, 50%, 0.2);
-    --sidebar-color:hsla(197, 100%, 43%, 0.5);
-    --sect-color: rgb(255, 174, 0);
-    --font-color: rgb(201, 198, 198);
-    --head-color: hsla(0, 88%, 16%, 0.842);
-    --h1-color: hsla(300, 100%, 50%, 0.1);
-    --page-top-position:85%;
-    --page-width:30%;
-    --bottom-bar-height:15vh;
-    --bottom-bar-color: hsla(27, 94%, 49%, 0.1);
+/* style file created by Yilian Zhang
+ ======================================
+ 00: css variable
+ 01: color
+ 02: Layout
+ 03: Typography
 
+
+ ========================
+ */
+
+ /* 00 css variable */
+ :root{
+    --body-color: hsla(359,39%,35%,0.8);
+    --page-color: hsla(30,32%,88%,0.9);
+    --sidebar-color: rgb(191,164,99);
+    --font-color:rgb(2, 17, 22);
+    --page-top-position: 85%;
+    --page-width: 30%;
+    --bottom-bar-height: 12vh;
+    --bottom-bar-color: hsla(27,43%,55%,1);
 }
-/* 01 Color*/
-body{
+
+ /* 01 Color */
+ body{
     background-color: var(--body-color);
-}
-#zen-intro{
+ }
+ #zen-intro{
     background-color: var(--page-color);
-    color: var(--font-color)
-}
-#zen-supporting{
+    color: var(--font-color);
+ }
+ #zen-supporting{
+    background-color: var(--page-color);
+ }
+.sidebar{
     background-color: var(--sidebar-color);
 }
-.sidebar{
-    background-color: var(--sect-color);
-    color: var(--font-color)
-}
-#zen-summary{
-    background-color: var(--head-color);
-}
 h1{
-    background-color: var(--h1-color);
+    background-color: brown;
 }
-/*02 layout*/
-div.explanation, div.requirements, div.benefits, div.participation{
+
+/*02 Layout */
+div.explanation, div.requirements,div.benefits,div.participation{
     position: fixed;
     width: var(--page-width);
     top: var(--page-top-position);
-    background-image: url(../img/newspaper3.jpg)
+    background-image: url(../img/newspaper3.jpg);
+    transition: all 4s ease-in-out;
 }
+
+
 div.explanation{
-    left:0%;
+    left:1%;
 }
-div.requirment{
-    left:15%
+
+
+div.requirements{
+    left: 18vw;
 }
+
 div.benefits{
-    left:30%;
+    left: 36vw;
 }
+
 div.participation{
-    left:45%;
+    left: 54vw;
 }
 aside.sidebar{
     position: absolute;
     top:20%;
-    right:0;
+    right: 0;
     width: 20%;
     height:100%;
 }
+
 section.intro{
+    
     position: fixed;
-    top:0%;
-    left:25%;
-    width:40%;
-    height:100%;
-    padding: 4px;
-    border:2px dashed blue;
-    margin-left:10px;
-    text-indent:1px;
+    bottom: 5%;
+    left:30%;
+    width: 30%;
+    height:80%;
+    background-image:url(../img/newspaper3.jpg) ;
+    padding:2%;
+    border: 2px dashed rgb(39, 34, 34);
+    margin-left: 10px;
+    text-indent: 1px;  
+    transform: rotate(-10deg) translate(-100px,0);
 }
+
 div.extra2{
-    position:fixed;
+    position: fixed;
     bottom:0;
-    left:0;
-    width:100%;
+    left: 0;
+    width: 100%;
     height:var(--bottom-bar-height);
     background-color: var(--bottom-bar-color);
 }
 
 div.extra1{
-position:fixed;
-bottom:0;
-left:15%;
-width:10%;
-height:100%;
-background-image: url(../img/newspaper2.jpg);
-z-index: -5;
+    position: fixed;
+    bottom: 5%;
+    left:20%;
+    width: 30%;
+    height:80%;
+    background-image: url(../img/newspaper2.jpg);
+    z-index: -1;
 }
 
-div.explanation h3, div.requirements h3, div.benefits h3, div.participation h3{
-    margin-top: 50%;
+
+div.explanation h3, div.requirements h3,div.benefits h3,div.participation h3{
+    margin-top: -5%;
     width: 12vw;
-    background-color:beige;
+    background-color: rgb(240, 135, 7);
+    padding-left:5px;
+    border-radius: 10px 100px / 120px;
 }
 
-@font-face{
-    font-family: 'myfont';
-    src: url(../fonts/chunkfive.eot)
+
+
+/**03:  Typography **/
+@font-face {
+    font-family: 'myfont' ;
+    src: url(../fonts/chunkfive.eot);
 }
+
 header h1{
-    font-family: 'my font',sans-serif;
-    font-weight:100;
-    font-size:2.25em;
+    font-family: 'myfont',sans-serif;
+    font-weight: 100;
+    font-size: 1.25em;
     letter-spacing: normal;
-    line-height: normal;
+    line-height: 1em;
+    text-transform: uppercase;
 }
+
 header h2{
-    font-family: 'Edu+AU+VIC+WA+NT+Dots',cursive;
+    /* use a different web fonts */
+    font-family: 'Ranchers',cursive;
 }
+
 a{
-    text-decoration:none;
+    text-decoration: none;
 }
 li{
-    list-style-type: 'none';
+    list-style-type: none;
 }
+
 #design-selection h3{
     visibility: hidden;
 }
+/* hide the archive section/ resource section */
+#design-archives{
+    display: none;
+}
 
+/* 04, selector practice , transform, transition, .... */
+a:hover{
+    font-size: 1.5em;
+}
+
+div.explanation:active{
+    top:15vh;
+    height:100vh;
+
+}
+
+div.requirments:active{
+    top:15vh;
+    height:100vh;
+}
+
+div.benefits:active{
+    top:15vh;
+    height:100vh;
+}
+div.participation:active{
+    top:15vh;
+    height:100vh;
+}
+
+p::first-letter{
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+p:nth-child(2n){
+    background-color:beige;
+}
+p:nth-child(2n+1){
+    background-color:aqua;
+}
+h3{text-shadow: 0.2em 0.5em}
+div.explanation h3, div.requirements h3,div.benefits h3,div.participation h3{
+    border-top-left-radius:20px;
+    border-top: solid red 1px;
+    padding-left: 5px;
+}
+
+ul{
+    list-style-image:url(../img/star.png);
+}
+
+section.intro h3 ~p{
+    opacity:1;
+    transition: all 3s ease-in-out;
+}
+section.intro h3:hover ~p{
+    transform: scale(0.2);
+    opacity:0;
+}
+@keyframes backandforth{
+    from{transform: translate(-500px,0);}
+    30%{transform: translate(-300px,0);}
+    50%{transform: translate(300px,0);}
+    70%{transform: translate(500px,0);}
+    90%{transform: translate(600px,0);}
+}
+
+footer{
+    position:fixed;
+    bottom:1vh;
+    left:50%;
+    animation: 10s ease-in-out 2s alternate infinite backandforth;
+}
+
+
+aside.sidebar{
+    clip-path:polygon(0 0,0 40%, 50% 90%, 100% 40%, 100% 0)
+}
