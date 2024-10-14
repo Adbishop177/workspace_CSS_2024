@@ -110,7 +110,7 @@ div.extra1{
 
 div.explanation h3, div.requirements h3,div.benefits h3,div.participation h3{
     margin-top: -5%;
-    width: 12vw;
+    width: 14vw;
     background-color: rgb(240, 135, 7);
     padding-left:5px;
     border-radius: 10px 100px / 120px;
@@ -164,7 +164,7 @@ div.explanation:active{
 
 }
 
-div.requirments:active{
+div.requirements:active{
     top:15vh;
     height:100vh;
 }
